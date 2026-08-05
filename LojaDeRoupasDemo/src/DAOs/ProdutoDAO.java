@@ -7,12 +7,10 @@ public class ProdutoDAO {
 
     private ArrayList<Produto> produtos = new ArrayList<>();
 
-    // CREATE
     public void adicionar(Produto produto) {
         produtos.add(produto);
     }
-
-    // READ
+ 
     public ArrayList<Produto> listar() {
         return produtos;
     }
@@ -25,8 +23,6 @@ public class ProdutoDAO {
         }
         return null;
     }
-
-    // UPDATE
     public boolean atualizar(int id, Produto novoProduto) {
         for (int i = 0; i < produtos.size(); i++) {
             if (produtos.get(i).getId() == id) {
@@ -37,7 +33,6 @@ public class ProdutoDAO {
         return false;
     }
 
-    // DELETE
     public boolean remover(int id) {
         Produto produto = buscar(id);
 
